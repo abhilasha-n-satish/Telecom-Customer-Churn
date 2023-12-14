@@ -1,0 +1,1819 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="26" y="1578" width="1072" height="1035" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Phase 2: Data Analysis - Churn Customer Profile Characteristics and the risk factors</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="100" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Phase 2: Data Analysis - Churn Customer Profile Characteristics and the risk factors</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="126" y="1746" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>clean dataset</AnnotationText>
+              <DefaultAnnotationText>cleaned_churn_set.xlsx
+Query=`cleaned_dataset$`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Customer ID" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Gender" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Age" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Married" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Number of Dependents" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="City" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Zip Code" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Latitude" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Longitude" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Number of Referrals" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Tenure in Months" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Offer" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Phone Service" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Avg Monthly Long Distance Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Multiple Lines" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Internet Service" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Internet Type" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Avg Monthly GB Download" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Online Security" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Online Backup" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Device Protection Plan" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Premium Tech Support" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Streaming TV" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Streaming Movies" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Streaming Music" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Unlimited Data" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Contract" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Paperless Billing" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Payment Method" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Monthly Charge" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Refunds" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Extra Data Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Long Distance Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Revenue" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Customer Status" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Churn Category" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Churn Reason" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="234" y="1746" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Gender" selected="True" />
+                <SelectField field="Age" selected="True" />
+                <SelectField field="Married" selected="True" />
+                <SelectField field="Number of Dependents" selected="True" />
+                <SelectField field="City" selected="True" />
+                <SelectField field="Zip Code" selected="True" />
+                <SelectField field="Offer" selected="True" />
+                <SelectField field="Internet Type" selected="True" />
+                <SelectField field="Online Security" selected="True" />
+                <SelectField field="Online Backup" selected="True" />
+                <SelectField field="Premium Tech Support" selected="True" />
+                <SelectField field="Contract" selected="True" />
+                <SelectField field="Payment Method" selected="True" />
+                <SelectField field="Total Revenue" selected="True" />
+                <SelectField field="Customer Status" selected="True" />
+                <SelectField field="Churn Category" selected="True" />
+                <SelectField field="Churn Reason" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="330" y="1746" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Customer Status</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2023-12-12 21:51:04</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>Churned</Operand>
+                  <StartDate>2023-12-12 21:51:04</StartDate>
+                  <EndDate>2023-12-12 21:51:04</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[Churned Customers
+]]></AnnotationText>
+              <DefaultAnnotationText>[Customer Status] = "Churned"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="762" y="1734" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Gender" action="GroupBy" rename="Gender" />
+                <SummarizeField field="Married" action="GroupBy" rename="Married" />
+                <SummarizeField field="Customer Status" action="Count" rename="# of Churned Customers" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="762" y="1806" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Offer" action="GroupBy" rename="Offer" />
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="894" y="1734" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="# of Churned Customers" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Gender &amp; Marital Status</AnnotationText>
+              <DefaultAnnotationText># of Churned Customers - Descending</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="894" y="1806" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Count" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Offers</AnnotationText>
+              <DefaultAnnotationText>Count - Descending</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="522" y="1890" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [Age] &lt;= 17 THEN &quot;Children&quot;&#xA;ELSEIF [Age] &lt;= 24 THEN 'Young Adults'&#xA;ELSEIF [Age] &lt;= 39 THEN 'Adults'&#xA;ELSEIF [Age] &lt;= 59 THEN 'Middle-Aged Adults'&#xA;ELSE 'Senior Citizens'&#xA;ENDIF" field="c_age" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Segregated based on Age into Young adults, adults, middle-aged, and Senior Citizens.</AnnotationText>
+              <DefaultAnnotationText>c_age = IF [Age] &lt;= 17 THEN "Children"
+ELSEIF [Age] &lt;= 24 THEN 'Young Adults'
+EL...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="762" y="1890" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="c_age" action="GroupBy" rename="c_age" />
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="894" y="1890" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Count" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Age</AnnotationText>
+              <DefaultAnnotationText>Count - Descending</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="762" y="1962" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Contract" action="GroupBy" rename="Contract" />
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="894" y="1962" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Count" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Contract</AnnotationText>
+              <DefaultAnnotationText>Count - Descending</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="762" y="2046" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Internet Type" action="GroupBy" rename="Internet Type" />
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="30">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="894" y="2046" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Count" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Internet Type</AnnotationText>
+              <DefaultAnnotationText>Count - Descending</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="762" y="2130" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Payment Method" action="GroupBy" rename="Payment Method" />
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="894" y="2130" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Count" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Payment Method</AnnotationText>
+              <DefaultAnnotationText>Count - Descending</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="522" y="2190" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="If [Number of Dependents] = 0 then &quot;No dependents&quot;&#xA;ELSE &quot;dependents&quot;&#xA;ENDIF" field="c_dependents" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Segregated into 'dependents' and 'No dependents'.</AnnotationText>
+              <DefaultAnnotationText>c_dependents = If [Number of Dependents] = 0 then "No dependents"
+ELSE "dependen...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="762" y="2190" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="c_dependents" action="GroupBy" rename="c_dependents" />
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="894" y="2190" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Count" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Dependents</AnnotationText>
+              <DefaultAnnotationText>Count - Descending</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="37">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="762" y="2274" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Premium Tech Support" action="GroupBy" rename="Premium Tech Support" />
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="762" y="2358" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Online Security" action="GroupBy" rename="Online Security" />
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="762" y="2454" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Online Backup" action="GroupBy" rename="Online Backup" />
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="894" y="2274" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Count" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Premium Tech Support</AnnotationText>
+              <DefaultAnnotationText>Count - Descending</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="894" y="2358" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Count" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Online Security</AnnotationText>
+              <DefaultAnnotationText>Count - Descending</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="42">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="893" y="2454" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Count" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Online Backup</AnnotationText>
+              <DefaultAnnotationText>Count - Descending</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="26" y="258" width="1314" height="823" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Phase 2: Data Analysis - KPIs</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="100" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Phase 2: Data Analysis - KPIs</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="126" y="510" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>cleaned_churn_set.xlsx
+Query=`cleaned_dataset$`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Customer ID" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Gender" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Age" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Married" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Number of Dependents" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="City" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Zip Code" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Latitude" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Longitude" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Number of Referrals" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Tenure in Months" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Offer" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Phone Service" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Avg Monthly Long Distance Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Multiple Lines" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Internet Service" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Internet Type" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Avg Monthly GB Download" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Online Security" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Online Backup" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Device Protection Plan" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Premium Tech Support" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Streaming TV" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Streaming Movies" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Streaming Music" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Unlimited Data" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Contract" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Paperless Billing" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Payment Method" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Monthly Charge" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Refunds" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Extra Data Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Long Distance Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Revenue" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Customer Status" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Churn Category" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Churn Reason" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="222" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Customer Status</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2023-12-14 18:37:36</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>Churned</Operand>
+                  <StartDate>2023-12-14 18:37:36</StartDate>
+                  <EndDate>2023-12-14 18:37:36</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Churned Customers</AnnotationText>
+              <DefaultAnnotationText>[Customer Status] = "Churned"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="55">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="306" y="570" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Customer Status</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2023-12-14 18:38:00</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>Stayed</Operand>
+                  <StartDate>2023-12-14 18:38:00</StartDate>
+                  <EndDate>2023-12-14 18:38:00</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Stayed (T) &amp; Joined (F)</AnnotationText>
+              <DefaultAnnotationText>[Customer Status] = "Stayed"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="56">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="570" y="486" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText># Customers Churned &amp; Total Revenue</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="57">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="654" y="558" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText># Customers Stayed &amp; Total Revenue</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="58">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="726" y="642" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText># Customers Joined &amp; Total Revenue</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="59">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="462" y="414" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+                <SummarizeField field="Total Revenue" action="Sum" rename="Total Revenue" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText># Customers &amp; Total Revenue</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="62">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="282" y="798" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Total Revenue" action="Percentile" rename="High-Value Threshold">
+                  <Percentile value="0.8" />
+                </SummarizeField>
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>80% of total revenue- segregating as high value customer.</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="63">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="486" y="738" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="1" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="1" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_Customer ID" selected="True" input="Left_" />
+                    <SelectField field="Left_Gender" selected="True" input="Left_" />
+                    <SelectField field="Left_Age" selected="True" input="Left_" />
+                    <SelectField field="Left_Married" selected="True" input="Left_" />
+                    <SelectField field="Left_Number of Dependents" selected="True" input="Left_" />
+                    <SelectField field="Left_City" selected="True" input="Left_" />
+                    <SelectField field="Left_Zip Code" selected="True" input="Left_" />
+                    <SelectField field="Left_Latitude" selected="True" input="Left_" />
+                    <SelectField field="Left_Longitude" selected="True" input="Left_" />
+                    <SelectField field="Left_Number of Referrals" selected="True" input="Left_" />
+                    <SelectField field="Left_Tenure in Months" selected="True" input="Left_" />
+                    <SelectField field="Left_Offer" selected="True" input="Left_" />
+                    <SelectField field="Left_Phone Service" selected="True" input="Left_" />
+                    <SelectField field="Left_Avg Monthly Long Distance Charges" selected="True" input="Left_" />
+                    <SelectField field="Left_Multiple Lines" selected="True" input="Left_" />
+                    <SelectField field="Left_Internet Service" selected="True" input="Left_" />
+                    <SelectField field="Left_Internet Type" selected="True" input="Left_" />
+                    <SelectField field="Left_Avg Monthly GB Download" selected="True" input="Left_" />
+                    <SelectField field="Left_Online Security" selected="True" input="Left_" />
+                    <SelectField field="Left_Online Backup" selected="True" input="Left_" />
+                    <SelectField field="Left_Device Protection Plan" selected="True" input="Left_" />
+                    <SelectField field="Left_Premium Tech Support" selected="True" input="Left_" />
+                    <SelectField field="Left_Streaming TV" selected="True" input="Left_" />
+                    <SelectField field="Left_Streaming Movies" selected="True" input="Left_" />
+                    <SelectField field="Left_Streaming Music" selected="True" input="Left_" />
+                    <SelectField field="Left_Unlimited Data" selected="True" input="Left_" />
+                    <SelectField field="Left_Contract" selected="True" input="Left_" />
+                    <SelectField field="Left_Paperless Billing" selected="True" input="Left_" />
+                    <SelectField field="Left_Payment Method" selected="True" input="Left_" />
+                    <SelectField field="Left_Monthly Charge" selected="True" input="Left_" />
+                    <SelectField field="Left_Total Charges" selected="True" input="Left_" />
+                    <SelectField field="Left_Total Refunds" selected="True" input="Left_" />
+                    <SelectField field="Left_Total Extra Data Charges" selected="True" input="Left_" />
+                    <SelectField field="Left_Total Long Distance Charges" selected="True" input="Left_" />
+                    <SelectField field="Left_Total Revenue" selected="True" input="Left_" />
+                    <SelectField field="Left_Customer Status" selected="True" input="Left_" />
+                    <SelectField field="Left_Churn Category" selected="True" input="Left_" />
+                    <SelectField field="Left_Churn Reason" selected="True" input="Left_" />
+                    <SelectField field="Right_High-Value Threshold" selected="True" input="Right_" />
+                    <SelectField field="Right_Customer ID" selected="False" rename="Right_Customer ID" input="Right_" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Joining the threshold field to original dataset</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="64">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="606" y="738" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [Total Revenue] &gt;= [High-Value Threshold] THEN 'High Value' ELSE 'Low Value' &#xA;ENDIF" field="High-Value Flag" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Flagging top 20% customers as High Value Customers</AnnotationText>
+              <DefaultAnnotationText>High-Value Flag = IF [Total Revenue] &gt;= [High-Value Threshold] THEN 'High Value'...</DefaultAnnotationText>
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="65">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="858" y="738" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+                <SummarizeField field="Total Revenue" action="Sum" rename="Sum_Total Revenue" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText># High Value Customers &amp; Total Revenue</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="66">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="726" y="738" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>High-Value Flag</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2023-12-14 20:58:53</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>High Value</Operand>
+                  <StartDate>2023-12-14 20:58:53</StartDate>
+                  <EndDate>2023-12-14 20:58:53</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[High-Value Flag] = "High Value"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="67">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="330" y="738" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="1" field="1" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[1 = 1
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="68">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="378" y="810" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="1" field="1" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[1 = 1
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="69">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="858" y="834" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Customer Status</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2023-12-14 21:10:20</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>Churned</Operand>
+                  <StartDate>2023-12-14 21:10:20</StartDate>
+                  <EndDate>2023-12-14 21:10:20</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Churned Customers</AnnotationText>
+              <DefaultAnnotationText>[Customer Status] = "Churned"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="70">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="990" y="810" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+                <SummarizeField field="Total Revenue" action="Sum" rename="Sum_Total Revenue" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText># High Value Customers Churned &amp; Total Revenue</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="71">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1002" y="905" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Customer Status</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2023-12-14 21:11:46</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2023-12-14 21:11:46</StartDate>
+                  <EndDate>2023-12-14 21:11:46</EndDate>
+                  <Operand>Stayed</Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Stayed Customers</AnnotationText>
+              <DefaultAnnotationText>[Customer Status] = "Stayed"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="72">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1134" y="882" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+                <SummarizeField field="Total Revenue" action="Sum" rename="Sum_Total Revenue" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText># High Value Customers Stayed &amp; Total Revenue</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="True" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="25" y="1118" width="831" height="423" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Phase 2: Data Analysis - Geographical Analysis</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="100" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Phase 2: Data Analysis - Geographical Analysis</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="125" y="1254" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>clean dataset</AnnotationText>
+              <DefaultAnnotationText>cleaned_churn_set.xlsx
+Query=`cleaned_dataset$`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Customer ID" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Gender" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Age" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Married" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Number of Dependents" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="City" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Zip Code" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Latitude" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Longitude" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Number of Referrals" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Tenure in Months" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Offer" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Phone Service" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Avg Monthly Long Distance Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Multiple Lines" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Internet Service" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Internet Type" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Avg Monthly GB Download" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Online Security" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Online Backup" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Device Protection Plan" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Premium Tech Support" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Streaming TV" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Streaming Movies" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Streaming Music" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Unlimited Data" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Contract" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Paperless Billing" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Payment Method" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Monthly Charge" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Refunds" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Extra Data Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Long Distance Charges" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Total Revenue" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="Double" />
+                <Field name="Customer Status" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Churn Category" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+                <Field name="Churn Reason" size="255" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||`cleaned_dataset$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="45">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="414" y="1242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="City" action="GroupBy" rename="City" />
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Grouped by Cities</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="46">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="522" y="1242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Count" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText># Customers grouped by cities</AnnotationText>
+              <DefaultAnnotationText>Count - Descending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="47">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="234" y="1254" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Customer Status</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2023-12-14 18:18:01</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>Churned</Operand>
+                  <StartDate>2023-12-14 18:18:01</StartDate>
+                  <EndDate>2023-12-14 18:18:01</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Churned Customers</AnnotationText>
+              <DefaultAnnotationText>[Customer Status] = "Churned"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="49">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="414" y="1350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>City</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2023-12-14 18:19:15</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>San Diego</Operand>
+                  <StartDate>2023-12-14 18:19:15</StartDate>
+                  <EndDate>2023-12-14 18:19:15</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Filtered "San Diego"</AnnotationText>
+              <DefaultAnnotationText>[City] = "San Diego"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="50">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="522" y="1326" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Churn Category" action="GroupBy" rename="Churn Category" />
+                <SummarizeField field="Customer Status" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+            <Position x="654" y="1242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>First</Mode>
+              <N>10</N>
+              <GroupFields orderChanged="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Top 10 cities with the most churn</AnnotationText>
+              <DefaultAnnotationText>First 10 rows</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="28" y="28" width="589" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Phase 1: Data Cleaning</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Phase 1: Data Cleaning</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="53" y="89" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>telecom_customer_churn.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Customer ID" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Gender" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Age" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Married" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Number of Dependents" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="City" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Zip Code" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Latitude" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Longitude" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Number of Referrals" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Tenure in Months" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Offer" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Phone Service" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Avg Monthly Long Distance Charges" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Multiple Lines" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Internet Service" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Internet Type" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Avg Monthly GB Download" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Online Security" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Online Backup" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Device Protection Plan" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Premium Tech Support" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Streaming TV" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Streaming Movies" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Streaming Music" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Unlimited Data" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Contract" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Paperless Billing" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Payment Method" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Monthly Charge" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Total Charges" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Total Refunds" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Total Extra Data Charges" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Total Long Distance Charges" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Total Revenue" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Customer Status" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Churn Category" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+                <Field name="Churn Reason" size="254" source="File: C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\telecom_customer_churn.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings>
+            <Position x="282" y="77" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Check Box (135)">False</Value>
+              <Value name="Check Box (136)">False</Value>
+              <Value name="List Box (11)">""</Value>
+              <Value name="Check Box (84)">False</Value>
+              <Value name="Check Box (117)">False</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">False</Value>
+              <Value name="Check Box (122)">False</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">False</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">False</Value>
+              <Value name="Drop Down (81)">upper</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="162" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF IsNull([Avg Monthly Long Distance Charges]) THEN &quot;0&quot; ELSE [Avg Monthly Long Distance Charges] ENDIF&#xA;" field="Avg Monthly Long Distance Charges" size="254" type="V_String" />
+                <FormulaField expression="IF IsNull([Multiple Lines]) THEN &quot;No&quot; ELSE [Multiple Lines] ENDIF&#xA;" field="Multiple Lines" size="254" type="V_String" />
+                <FormulaField expression="IF IsNull([Avg Monthly GB Download]) THEN &quot;0&quot; ELSE [Avg Monthly GB Download] ENDIF" field="Avg Monthly GB Download" size="254" type="V_String" />
+                <FormulaField expression="IF IsNull([Online Security]) THEN &quot;No&quot; ELSE [Online Security] ENDIF" field="Online Security" size="254" type="V_String" />
+                <FormulaField expression="IF IsNull([Online Backup]) THEN &quot;No&quot; ELSE [Online Backup] ENDIF" field="Online Backup" size="254" type="V_String" />
+                <FormulaField expression="IF IsNull([Device Protection Plan]) THEN &quot;No&quot; ELSE [Device Protection Plan] ENDIF" field="Device Protection Plan" size="254" type="V_String" />
+                <FormulaField expression="IF IsNull([Premium Tech Support]) THEN &quot;No&quot; ELSE [Premium Tech Support] ENDIF" field="Premium Tech Support" size="254" type="V_String" />
+                <FormulaField expression="IF IsNull([Streaming TV]) THEN &quot;No&quot; ELSE [Streaming TV] ENDIF" field="Streaming TV" size="254" type="V_String" />
+                <FormulaField expression="IF IsNull([Streaming Movies]) THEN &quot;No&quot; ELSE [Streaming Movies] ENDIF" field="Streaming Movies" size="254" type="V_String" />
+                <FormulaField expression="IF IsNull([Streaming Music]) THEN &quot;No&quot; ELSE [Streaming Music] ENDIF" field="Streaming Music" size="254" type="V_String" />
+                <FormulaField expression="IF IsNull([Unlimited Data]) THEN &quot;No&quot; ELSE [Unlimited Data] ENDIF" field="Unlimited Data" size="254" type="V_String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[Replaced the Blank values for few columns to "No" and "0"
+]]></AnnotationText>
+              <DefaultAnnotationText>Avg Monthly Long Distance Charges = IF IsNull([Avg Monthly Long Distance Charges...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="378" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Customer ID" selected="True" type="V_WString" size="254" />
+                <SelectField field="Age" selected="True" type="Double" size="8" />
+                <SelectField field="Number of Dependents" selected="True" type="Double" size="8" />
+                <SelectField field="Number of Referrals" selected="True" type="Double" size="8" />
+                <SelectField field="Tenure in Months" selected="True" type="Double" size="8" />
+                <SelectField field="Avg Monthly Long Distance Charges" selected="True" type="Double" size="8" />
+                <SelectField field="Avg Monthly GB Download" selected="True" type="Double" size="8" />
+                <SelectField field="Monthly Charge" selected="True" type="Double" size="8" />
+                <SelectField field="Total Charges" selected="True" type="Double" size="8" />
+                <SelectField field="Total Refunds" selected="True" type="Double" size="8" />
+                <SelectField field="Total Extra Data Charges" selected="True" type="Double" size="8" />
+                <SelectField field="Total Long Distance Charges" selected="True" type="Double" size="8" />
+                <SelectField field="Total Revenue" selected="True" type="Double" size="8" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="486" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="25">C:\Users\satis\OneDrive\Dokumente\Portfolio\Maven Projects\Telecom+Customer+Churn\New folder\cleaned_churn_set.xlsx|||cleaned_dataset</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <PreserveFormat>False</PreserveFormat>
+                <SkipFieldNames>False</SkipFieldNames>
+                <OutputOption>Create</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>cleaned_churn_set.xlsx
+Query=cleaned_dataset</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="False" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="True" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="True" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="False" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Join" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="True" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="66" Connection="True" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="63" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="Output" />
+      <Destination ToolID="63" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="True" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="False" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="True" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="True" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="True" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="True" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output26" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="74b4d976-0f8a-4a2c-967d-3728b236e9e1" />
+      <Telemetry>
+        <PreviousWorkflowId value="93a9fcb1-430b-43b0-bb5d-237519b6e9e4" />
+        <OriginWorkflowId value="93a9fcb1-430b-43b0-bb5d-237519b6e9e4" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
